@@ -1,15 +1,16 @@
 import React from 'react';
 import "../css/NavBar.css"
+import {Link} from 'react-router-dom';
 
 function NavBar() {
   return (
     <nav className="left-navbar">
       <ul>
         <li>
-          <a href="#">Home</a>
+          <Link to={"/"}>Home</Link>
         </li>
         <li>
-          <a href="#">Scores</a>
+        <Link to={"/scores"}>Scores</Link>
         </li>
         <li>
           <a href="#">News</a>

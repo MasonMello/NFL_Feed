@@ -1,5 +1,5 @@
 .home{
-    background-color: #d2d2d2;
+    background-color: var(--primarycolor);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -10,7 +10,6 @@
   
   .navbar-container {
     width: 200px; 
-    padding: 20px;
   }
   
   .article-grid {

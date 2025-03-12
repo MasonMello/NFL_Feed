@@ -14,7 +14,6 @@ function Home(){
                 setLoading(true);
                 const latestArticles = await getAllArticles();
                 setArticles(latestArticles);
-                console.log(latestArticles);
                 setError(null);
             }catch(err){
                 setError("Failed to load articles")
@@ -30,9 +29,6 @@ function Home(){
     return(
         <div className="home">
             <div className="container">
-                <div className="navbar-container">
-                    <NavBar />
-                </div>
                 <div className="article-grid">
                     {loading && <p>Loading...</p>}
                     {error && <p>{error}</p>}
