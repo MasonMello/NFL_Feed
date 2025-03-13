@@ -19,7 +19,7 @@ export const getGames = async () => {
   return data.events;
 };
 
-const ARTICLE_PROXY_URL = 'http://localhost:5000/api/article';
+const ARTICLE_PROXY_URL = 'http://localhost:3001/api/article';
 
 export const getArticle = async (articleID) => {
   const response = await fetch(`${ARTICLE_PROXY_URL}/${articleID}`);

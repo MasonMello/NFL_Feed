@@ -27,7 +27,7 @@ const cors = require('cors');
 const axios = require('axios');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 
 app.use(
   cors({
@@ -42,7 +42,7 @@ app.get('/api/article/:id', async (req, res) => {
       `https://content.core.api.espn.com/v1/sports/news/${articleId}`
     );
     //res.send(response.data);
-    console.log(response.data);
+    //console.log(response.data);
     res.json(response.data);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch data from API' });

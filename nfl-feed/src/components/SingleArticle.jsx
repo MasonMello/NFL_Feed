@@ -1,5 +1,6 @@
 import { getArticle } from '../services/api';
 import { useState, useEffect } from 'react';
+import "../css/SingleArticle.css"
 
 function SingleArticle({ articleID }) {
   const [article, setArticle] = useState(null);
@@ -33,6 +34,16 @@ function SingleArticle({ articleID }) {
         article.headlines[0].story,
         'text/html'
       );
+  
+      // Disable all links in the story
+      const links = doc.querySelectorAll('a');
+      links.forEach((link) => {
+        link.removeAttribute('href');
+        link.style.color = 'inherit';
+        link.style.textDecoration = 'none';
+        link.style.cursor = 'default';
+      });
+  
       setStory(doc.body.innerHTML);
     } else {
       setStory(null); // or a suitable fallback state
@@ -41,9 +52,18 @@ function SingleArticle({ articleID }) {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
-  //console.log(article);
 
-  return <div dangerouslySetInnerHTML={{ __html: story }} />;
+  //return <div dangerouslySetInnerHTML={{ __html: story }} />;
+  return(
+    <div className='container'>
+      <div className="content">
+        <h1 className='header'>{article.headlines[0].headline}</h1>
+        <img src={article.headlines[0].images[0].url} alt="" />
+        <div dangerouslySetInnerHTML={{ __html: story }} />
+      </div>
+      
+    </div>
+  )
 }
 
 export default SingleArticle;

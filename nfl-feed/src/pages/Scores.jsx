@@ -4,6 +4,7 @@ import ArticleCard from "../components/ArticleCard";
 import NavBar from "../components/NavBar";
 import ScoresCard from "../components/scoresCard";
 import { getGames } from "../services/api";
+import "../css/Games.css"
 
 function Scores(){
     const [games, setGames] = useState([]);
@@ -33,7 +34,7 @@ function Scores(){
                 <div className="game-grid">
                     {loading && <p>Loading...</p>}
                     {error && <p>{error}</p>}
-                    <h1>GAMES</h1>
+                    <h1 className="fs-1 d-flex justify-content-center align-items-center">Latest Scores</h1>
                     {games.map((game, index) => (
                         <ScoresCard game={game} key={index}/>
                     ))}
