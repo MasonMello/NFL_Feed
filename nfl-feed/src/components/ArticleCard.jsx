@@ -12,7 +12,7 @@ function ArticleCard({ article }) {
           <div className="card-header">
             {article.type}
           </div>
-          <img className="card-img-top img-fluid" src={article.images[0].url} alt="Card image cap"/>
+          <img className="card-img-top img-fluid hero" src={article.images[0].url} alt="Card image cap"/>
           <div className="card-body">
             <Link className="card-title" to={`/article/${link}`} >{article.headline}</Link>
             <p className="card-text">{article.description}</p>

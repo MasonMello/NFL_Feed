@@ -13,10 +13,10 @@ function NavBar() {
         <Link to={"/scores"}>Scores</Link>
         </li>
         <li>
-          <a href="#">News</a>
+          <a href={"/"}>News</a>
         </li>
         <li>
-          <a href="#">Watch</a>
+          <a href="/teams">Teams</a>
         </li>
         <li>
           <a href="#">More</a>

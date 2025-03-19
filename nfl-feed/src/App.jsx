@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import NavBar from './components/NavBar'
 import SingleArticle from './components/SingleArticle'
 import Scores from './pages/Scores'
+import Teams from './pages/Teams'
 
 function ArticleWrapper() {
   const { id } = useParams();
@@ -24,6 +25,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/article/:id' element={<ArticleWrapper/>}/>
           <Route path='/scores' element={<Scores/>}/>
+          <Route path='/teams' element={<Teams/>}/>
         </Routes>
     </main>
     </div>

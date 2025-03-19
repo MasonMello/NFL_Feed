@@ -9,6 +9,17 @@ export const getAllArticles = async () => {
   return data.articles;
 };
 
+const teamsURL = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams';
+export const getAllTeams = async () => {
+  const response = await fetch(teamsURL, {
+    mode: 'cors',
+  });
+  const data = await response.json();
+  console.log(data)
+  console.log(data.sports[0].leagues[0].teams)
+  return data.sports[0].leagues[0].teams;
+};
+
 const scoresURL =
   'https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard';
 export const getGames = async () => {

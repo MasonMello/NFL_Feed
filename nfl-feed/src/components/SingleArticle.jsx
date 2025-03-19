@@ -58,7 +58,7 @@ function SingleArticle({ articleID }) {
     <div className='container'>
       <div className="content">
         <h1 className='header'>{article.headlines[0].headline}</h1>
-        <img src={article.headlines[0].images[0].url} alt="" />
+        <img className='hero' src={article.headlines[0].images[0].url} alt="" />
         <div dangerouslySetInnerHTML={{ __html: story }} />
       </div>
       
