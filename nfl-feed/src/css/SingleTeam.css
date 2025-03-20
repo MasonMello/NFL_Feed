@@ -24,3 +24,17 @@
     align-items: center;
     margin-left: 20px;
 }
+
+.statscontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.stadium{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: white;
+}
