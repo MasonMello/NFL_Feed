@@ -8,10 +8,16 @@ import NavBar from './components/NavBar'
 import SingleArticle from './components/SingleArticle'
 import Scores from './pages/Scores'
 import Teams from './pages/Teams'
+import SingleTeam from './components/SingleTeam'
 
 function ArticleWrapper() {
   const { id } = useParams();
   return <SingleArticle articleID={id} />;
+}
+
+function TeamWrapper(){
+  const { id } = useParams();
+  return <SingleTeam teamID={id} />;
 }
 
 function App() {
@@ -26,6 +32,7 @@ function App() {
           <Route path='/article/:id' element={<ArticleWrapper/>}/>
           <Route path='/scores' element={<Scores/>}/>
           <Route path='/teams' element={<Teams/>}/>
+          <Route path='team/:id' element={<TeamWrapper/>}/>
         </Routes>
     </main>
     </div>

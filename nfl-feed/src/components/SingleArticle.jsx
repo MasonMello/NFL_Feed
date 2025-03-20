@@ -13,7 +13,6 @@ function SingleArticle({ articleID }) {
       try {
         setLoading(true);
         const articleData = await getArticle(articleID);
-        console.log(articleData);
         setArticle(articleData);
 
         setError(null);

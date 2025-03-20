@@ -14,8 +14,6 @@ function Teams(){
                 setLoading(true);
                 const teams = await getAllTeams();
                 setTeams(teams);
-                console.log(typeof teams);
-    console.log(teams);
                 setError(null);
             }catch(err){
                 setError("Failed to load teams")
