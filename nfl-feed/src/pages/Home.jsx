@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { getAllArticles } from "../services/api";
 import ArticleCard from "../components/ArticleCard";
 import "../css/Home.css";
-import NavBar from "../components/NavBar";
 
 function Home(){
     const [articles, setArticles] = useState([]);

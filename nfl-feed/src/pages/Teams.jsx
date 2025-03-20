@@ -35,11 +35,14 @@ function Teams(){
                 <div className="team-grid">
                     {loading && <p>Loading...</p>}
                     {error && <p>{error}</p>}
-                    <div className="row">
+                    <div className="team">
+                        <div className="row">
                         {teams.map((team, index) => (
                             <TeamCard team={team.team} key={index} />
                         ))}
+                        </div>
                     </div>
+                    
                     
                 </div>
             </div>
