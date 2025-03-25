@@ -1,13 +1,13 @@
 import React from 'react';
 import "../css/NavBar.css"
 import {Link} from 'react-router-dom';
-import logo from "../css/noBgWhite.png"
+import websitelogo from "../css/nfl-logo.svg.png"
 
 function NavBar() {
   return (
     <nav className="left-navbar">
       <ul style={{fontSize : "1.25em"}}>
-        <img src={logo} alt="logo" style={{objectFit: "contain", width: "100%"}} />
+        <img src={websitelogo} alt="websitelogo" style={{objectFit: "contain", width: "100%"}} />
         <li>
           <Link to={"/"}>Home</Link>
         </li>

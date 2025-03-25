@@ -12,12 +12,11 @@ function ScoresCard({ game }) {
         </div>
         
         <div className="d-flex holder align-items-center justify-content-around text-white mt-3">
-          
           <div className="team text-center container">
             <img
               src={game.competitions[0].competitors[0].team.logo}
               alt="Team 1 Logo"
-              className="team-logo"
+              
             />
             <span className="fs-5 fw-semibold mt-2 medium" style={{ color: `#${game.competitions[0].competitors[0].team.color}` }}>
               {game.competitions[0].competitors[0].team.name}
@@ -35,7 +34,6 @@ function ScoresCard({ game }) {
             <img
               src={game.competitions[0].competitors[1].team.logo}
               alt="Team 2 Logo"
-              className="team-logo"
             />
             <span className="fs-5 fw-semibold mt-2 medium" style={{ color: `#${game.competitions[0].competitors[1].team.color}` }}>
               {game.competitions[0].competitors[1].team.name}

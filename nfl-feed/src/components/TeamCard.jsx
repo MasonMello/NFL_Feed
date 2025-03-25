@@ -1,23 +1,19 @@
-import "../css/TeamCard.css"
-import {Link} from 'react-router-dom';
+import "../css/TeamCard.css";
+import { Link } from "react-router-dom";
 
 function TeamCard({ team }) {
   return (
-    <>
-      <div className="col-md-4 team">
-        <Link to={`/team/${team.abbreviation}`}>
-        <div className="card mb-3" style={{backgroundColor: `#${team.color}`, borderRadius: "10px", boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)", height: "250px", alignItems: "center", justifyContent: "center"}}>
-          <img className="card-img-top img-fluid" src={team.logos[1].href} alt="Card image cap" style={{objectFit: "cover", height: "200px", borderRadius: "10px 10px 0 0"}}/>
-          <div className="card-body d-flex flex-column align-items-center justify-content-center">
-            <h1 style={{color: "white", fontSize: "24px", fontWeight: "bold", marginBottom: "10px"}}>{team.displayName}</h1>
+    <div className="col-md-4 team">
+      <Link to={`/team/${team.abbreviation}`} className="team-link">
+        <div className="card team-card" style={{ backgroundColor: `#${team.color}`, position: "relative" }}>
+          <img className="team-logo" src={team.logos[1].href} alt="Team logo" />
+          <div className="card-body text-bottom">
+            <h1 className="team-name text-overlay">{team.displayName}</h1>
           </div>
         </div>
-        </Link>
-        
-      </div>
-      
-    </>
-  )
+      </Link>
+    </div>
+  );
 }
 
 export default TeamCard;

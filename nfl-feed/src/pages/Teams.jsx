@@ -28,9 +28,9 @@ function Teams(){
 
     
     return(
-        <div className="teams">
+        <div className="teams" style={{width: "100%"}}>
             <div className="container">
-                <div className="team-grid">
+                <div className="team-grid" style={{width: "100%"}}>
                     {loading && <p>Loading...</p>}
                     {error && <p>{error}</p>}
                     <div className="team">
