@@ -9,6 +9,7 @@ import SingleArticle from './components/SingleArticle'
 import Scores from './pages/Scores'
 import Teams from './pages/Teams'
 import SingleTeam from './components/SingleTeam'
+import TopNavBar from './components/TopNavBar'
 
 function ArticleWrapper() {
   const { id } = useParams();
@@ -23,18 +24,23 @@ function TeamWrapper(){
 function App() {
   return(
     <div className='app'>
-    <div className="navbar-container">
-      <NavBar />
-    </div>
-    <main>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/article/:id' element={<ArticleWrapper/>}/>
-          <Route path='/scores' element={<Scores/>}/>
-          <Route path='/teams' element={<Teams/>}/>
-          <Route path='team/:id' element={<TeamWrapper/>}/>
-        </Routes>
-    </main>
+      <div className="top-navbar-container">
+          <TopNavBar/>
+      </div>
+      <div className="sport-view container" style={{paddingTop: "70px"}}>
+        <div className="navbar-container">
+          <NavBar />
+        </div>
+        <main>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/article/:id' element={<ArticleWrapper/>}/>
+            <Route path='/scores' element={<Scores/>}/>
+            <Route path='/teams' element={<Teams/>}/>
+            <Route path='team/:id' element={<TeamWrapper/>}/>
+          </Routes>
+        </main>
+      </div>
     </div>
     
   )
