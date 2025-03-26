@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import "../css/SingleTeam.css"
 import React from 'react';
 
-function SingleTeam({ teamID }) {
+function SingleTeam({sport, teamID }) {
   const [team, setTeam] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -12,7 +12,7 @@ function SingleTeam({ teamID }) {
     const loadTeam = async () => {
       try {
         setLoading(true);
-        const teamData = await getTeam(teamID);
+        const teamData = await getTeam(sport,teamID);
         console.log(teamData);
         setTeam(teamData);
         setError(null);
@@ -100,7 +100,7 @@ function SingleTeam({ teamID }) {
       <div  style={{backgroundColor: `#${team.team.color}`}}>
         <div className="container stadium">
           <h1>{team.team.franchise.venue.fullName}</h1>
-          <img src={team.team.franchise.venue.images[1].href} alt="" />
+          <img src={team.team.franchise.venue.images[1]?.href || team.team.franchise.venue.images[0].href} alt="" />
           <h3>{`${team.team.franchise.venue.address.city} - ${team.team.franchise.venue.address.state} - ${team.team.franchise.venue.address.zipCode}`}</h3>
         </div>
         

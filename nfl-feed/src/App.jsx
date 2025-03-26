@@ -17,8 +17,28 @@ function ArticleWrapper() {
 }
 
 function TeamWrapper(){
-  const { id } = useParams();
-  return <SingleTeam teamID={id} />;
+  const { id, sport } = useParams();
+  return <SingleTeam sport={sport} teamID={id} />;
+}
+
+function HomeWrapper(){
+  const { sport } = useParams();
+  return <Home sport={sport} />;
+}
+
+function TeamsWrapper(){
+  const { sport } = useParams();
+  return <Teams sport={sport}/>
+} 
+
+function ScoresWrapper(){
+  const { sport } = useParams();
+  return <Scores sport={sport}/>
+}
+
+function NavWrapper(){
+  const {sport} = useParams();
+  return <NavBar sport={sport}/>
 }
 
 function App() {
@@ -29,15 +49,15 @@ function App() {
       </div>
       <div className="sport-view container" style={{paddingTop: "70px"}}>
         <div className="navbar-container">
-          <NavBar />
+          <NavWrapper/>
         </div>
         <main>
           <Routes>
-            <Route path='/' element={<Home/>}/>
+            <Route path='/:sport/' element={<HomeWrapper/>}/>
             <Route path='/article/:id' element={<ArticleWrapper/>}/>
-            <Route path='/scores' element={<Scores/>}/>
-            <Route path='/teams' element={<Teams/>}/>
-            <Route path='team/:id' element={<TeamWrapper/>}/>
+            <Route path='/:sport/scores' element={<ScoresWrapper/>}/>
+            <Route path='/:sport/teams' element={<TeamsWrapper/>}/>
+            <Route path='/:sport/team/:id' element={<TeamWrapper/>}/>
           </Routes>
         </main>
       </div>

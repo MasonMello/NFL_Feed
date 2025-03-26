@@ -23,9 +23,11 @@
   .top-navbar img{
     width: 150px;
     height: 50px;
-    margin-right: 20px;
+    margin-right: 200px;
     display: flex;
     align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   
   .top-navbar-container ul{
@@ -38,7 +40,7 @@
   }
   
   .top-navbar-container ul li{
-    margin-right: 50px;
+    margin-right: 60px;
     font-size: 1.5em;
   }
   
@@ -53,5 +55,5 @@
   }
   
   .top-navbar-container ul li a:hover{
-    color: #d80808;
+    color: #e41c1c;
   }

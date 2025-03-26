@@ -1,10 +1,11 @@
 import "../css/TeamCard.css";
 import { Link } from "react-router-dom";
 
-function TeamCard({ team }) {
+function TeamCard({ sport, team }) {
+  console.log(team);
   return (
     <div className="col-md-4 team">
-      <Link to={`/team/${team.abbreviation}`} className="team-link">
+      <Link to={`/${sport}/team/${team.abbreviation}`} className="team-link">
         <div className="card team-card" style={{ backgroundColor: `#${team.color}`, position: "relative" }}>
           <img className="team-logo" src={team.logos[1].href} alt="Team logo" />
           <div className="card-body text-bottom">

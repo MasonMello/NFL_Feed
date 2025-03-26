@@ -8,19 +8,16 @@ function TopNavBar() {
           <img src={espnlogo} alt="espnlogo" className="espnlogo" />
           <ul>
             <li>
-              <a href="#">NFL</a>
+              <a href="/nfl/">NFL</a>
             </li>
             <li>
-              <a href="#">NBA</a>
+              <a href="/nba/">NBA</a>
             </li>
             <li>
-              <a href="#">MLB</a>
+              <a href="/mlb/">MLB</a>
             </li>
             <li>
-              <a href="#">MLS</a>
-            </li>
-            <li>
-              <a href="#">NHL</a>
+              <a href="/nhl/">NHL</a>
             </li>
           </ul>
         </div>

@@ -2,7 +2,7 @@ import { getArticle } from '../services/api';
 import { useState, useEffect } from 'react';
 import "../css/SingleArticle.css"
 
-function SingleArticle({ articleID }) {
+function SingleArticle({ articleID, sport }) {
   const [article, setArticle] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -12,7 +12,7 @@ function SingleArticle({ articleID }) {
     const loadArticle = async () => {
       try {
         setLoading(true);
-        const articleData = await getArticle(articleID);
+        const articleData = await getArticle(sport, articleID);
         setArticle(articleData);
 
         setError(null);
