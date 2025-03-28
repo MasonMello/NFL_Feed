@@ -29,9 +29,6 @@ function NavBar() {
         <li>
           <a href={`/${sport}/teams`}>Teams</a>
         </li>
-        <li>
-          <a href="#">More</a>
-        </li>
       </ul>
     </nav>
   );

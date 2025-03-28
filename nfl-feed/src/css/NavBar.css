@@ -21,17 +21,15 @@
   margin-bottom: 20px;
 }
 
-.left-navbar a {
-  color: #fff;
+.left-navbar ul li a {
+  color: #ccc;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.left-navbar a:hover {
-  color: #e41c1c !important;
-}
-
-.left-navbar a:visited {
-  color: #fff; 
+.left-navbar ul li a:hover {
+  color: #e41c1c;
+  transform: scale(1.1);
 }
 
 .left-navbar ul img {
@@ -45,3 +43,4 @@
   border-radius: 10px; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
+
