@@ -6,7 +6,7 @@ import ScoresCard from "../components/scoresCard";
 import { getGames } from "../services/api";
 import "../css/Games.css"
 
-function Scores(){
+function Scores({sport}){
     const [games, setGames] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -14,7 +14,7 @@ function Scores(){
         const loadLatestGames = async () => {
             try{
                 setLoading(true);
-                const latestGames = await getGames();
+                const latestGames = await getGames(sport);
                 setGames(latestGames);
                 setError(null);
             }catch(err){

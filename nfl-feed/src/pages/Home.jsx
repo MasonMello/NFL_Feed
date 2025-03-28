@@ -3,7 +3,7 @@ import { getAllArticles } from "../services/api";
 import ArticleCard from "../components/ArticleCard";
 import "../css/Home.css";
 
-function Home(){
+function Home({sport}){
     const [articles, setArticles] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -11,7 +11,7 @@ function Home(){
         const loadLatestArticles = async () => {
             try{
                 setLoading(true);
-                const latestArticles = await getAllArticles();
+                const latestArticles = await getAllArticles(sport);
                 setArticles(latestArticles);
                 setError(null);
             }catch(err){
@@ -32,7 +32,7 @@ function Home(){
                     {loading && <p>Loading...</p>}
                     {error && <p>{error}</p>}
                     {articles.map((article, index) => (
-                        <ArticleCard article={article} key={index}/>
+                        <ArticleCard article={article} sport={sport} key={index}/>
                     ))}
                 </div>
             </div>

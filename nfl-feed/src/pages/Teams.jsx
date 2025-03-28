@@ -4,7 +4,7 @@ import ArticleCard from "../components/ArticleCard";
 import TeamCard from "../components/TeamCard";
 import NavBar from "../components/NavBar";
 
-function Teams(){
+function Teams({sport}){
     const [teams, setTeams] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -12,7 +12,7 @@ function Teams(){
         const loadTeams = async () => {
             try{
                 setLoading(true);
-                const teams = await getAllTeams();
+                const teams = await getAllTeams(sport);
                 setTeams(teams);
                 setError(null);
             }catch(err){
@@ -36,7 +36,7 @@ function Teams(){
                     <div className="team">
                         <div className="row">
                         {teams.map((team, index) => (
-                            <TeamCard team={team.team} key={index} />
+                            <TeamCard sport={sport} team={team.team} key={index} />
                         ))}
                         </div>
                     </div>
