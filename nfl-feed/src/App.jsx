@@ -54,7 +54,7 @@ function App() {
         <main>
           <Routes>
             <Route path='/:sport/' element={<HomeWrapper/>}/>
-            <Route path='/article/:id' element={<ArticleWrapper/>}/>
+            <Route path='/:sport/article/:id' element={<ArticleWrapper/>}/>
             <Route path='/:sport/scores' element={<ScoresWrapper/>}/>
             <Route path='/:sport/teams' element={<TeamsWrapper/>}/>
             <Route path='/:sport/team/:id' element={<TeamWrapper/>}/>

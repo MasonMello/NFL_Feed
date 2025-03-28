@@ -32,7 +32,7 @@ function Home({sport}){
                     {loading && <p>Loading...</p>}
                     {error && <p>{error}</p>}
                     {articles.map((article, index) => (
-                        <ArticleCard article={article} key={index}/>
+                        <ArticleCard article={article} sport={sport} key={index}/>
                     ))}
                 </div>
             </div>
