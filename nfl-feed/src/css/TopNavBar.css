@@ -29,6 +29,12 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  @media (max-width: 710px) {
+    .top-navbar img {
+      margin-right: 0px; 
+    }
+  }
   
   .top-navbar-container ul{
     display: flex;
@@ -57,3 +63,5 @@
   .top-navbar-container ul li a:hover{
     color: #e41c1c;
   }
+
+

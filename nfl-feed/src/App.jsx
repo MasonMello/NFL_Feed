@@ -44,10 +44,10 @@ function NavWrapper(){
 function App() {
   return(
     <div className='app'>
-      <div className="top-navbar-container">
+      <div className="topnavbarcontainer">
           <TopNavBar/>
       </div>
-      <div className="sport-view container" style={{paddingTop: "70px"}}>
+      <div className="sport-view " style={{paddingTop: "70px", paddingLeft: "0px",display: "flex" , justifyContent: "center"}}>
         <div className="navbar-container">
           <NavWrapper/>
         </div>
