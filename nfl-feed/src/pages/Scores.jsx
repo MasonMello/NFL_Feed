@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getAllArticles } from "../services/api";
 import ArticleCard from "../components/ArticleCard";
 import NavBar from "../components/NavBar";
-import ScoresCard from "../components/scoresCard";
+import ScoresCard from "../components/ScoresCard";
 import { getGames } from "../services/api";
 import "../css/Games.css"
 
