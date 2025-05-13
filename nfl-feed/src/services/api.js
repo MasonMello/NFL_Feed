@@ -58,7 +58,7 @@ export const getGames = async (sport) => {
 };
 
 
-const ARTICLE_PROXY_URL = 'http://localhost:3001/api/article';
+const ARTICLE_PROXY_URL = 'https://nfl-feed.onrender.com/api/article';
 
 export const getArticle = async (sport, articleID) => {
   const response = await fetch(`${ARTICLE_PROXY_URL}/${articleID}`);

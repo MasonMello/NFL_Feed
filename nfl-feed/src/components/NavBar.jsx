@@ -24,10 +24,10 @@ function NavBar() {
         <Link to={`${sport}/scores`}>Scores</Link>
         </li>
         <li>
-          <a href={`/${sport}/`}>News</a>
+          <Link to={`/${sport}/`}>News</Link>
         </li>
         <li>
-          <a href={`/${sport}/teams`}>Teams</a>
+          <Link to={`/${sport}/teams`}>Teams</Link>
         </li>
       </ul>
     </nav>
