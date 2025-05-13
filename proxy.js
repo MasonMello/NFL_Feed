@@ -49,6 +49,11 @@ app.get('/api/article/:id', async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('Server is running'); 
+});
+
+
 app.listen(PORT, () => {
   console.log(`Proxy server running on port ${PORT}`);
 });
