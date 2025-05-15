@@ -23,7 +23,7 @@ function TeamWrapper(){
 
 function HomeWrapper(){
   const { sport } = useParams();
-  return <Home sport={sport} />;
+  return <Home/>;
 }
 
 function TeamsWrapper(){

@@ -3,7 +3,11 @@ import { getAllArticles } from "../services/api";
 import ArticleCard from "../components/ArticleCard";
 import "../css/Home.css";
 
-function Home({sport}){
+function Home(){
+    const location = useLocation();
+    const currentRoute = location.pathname;
+    let sport = currentRoute.split('/')[1];
+
     const [articles, setArticles] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
