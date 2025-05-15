@@ -4,8 +4,6 @@ import ArticleCard from "../components/ArticleCard";
 import "../css/Home.css";
 
 function Home({sport}){
-    
-
     const [articles, setArticles] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
