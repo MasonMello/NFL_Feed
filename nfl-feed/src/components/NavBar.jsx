@@ -22,9 +22,11 @@ function NavBar() {
         </li>
         <li>
         <Link to={`${sport}/scores`}>Scores</Link>
+        {/* <a href={`/${sport}/scores`}>Scores</a> */}
         </li>
         <li>
           <Link to={`/${sport}/`}>News</Link>
+          {/* <a href={`/${sport}/`} >News</a> */}
         </li>
         <li>
           <Link to={`/${sport}/teams`}>Teams</Link>
