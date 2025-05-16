@@ -10,20 +10,19 @@ function TopNavBar() {
           <img src={espnlogo} alt="espnlogo" className="espnlogo" />
           <ul>
             <li>
-              {/* <Link to="/nfl/">NFL</Link> */}
-              <a href="/nfl">NFL</a>
+              <Link to="/nfl/" reloadDocument >NFL</Link>
             </li>
             <li>
-              {/* <Link to="/nba/">NBA</Link> */}
-              <a href="/nba">NBA</a>
+              <Link to="/nba/" reloadDocument >NBA</Link>
+              {/* <a href="/nba">NBA</a> */}
             </li>
             <li>
-              {/* <Link to="/mlb/">MLB</Link> */}
-              <a href="/mlb">MLB</a>
+              <Link to="/mlb/" reloadDocument >MLB</Link>
+              {/* <a href="/mlb">MLB</a> */}
             </li>
             <li>
-              {/* <Link to="/nhl/">NHL</Link> */}
-              <a href="/nhl">NHL</a>
+              <Link to="/nhl/" reloadDocument >NHL</Link>
+              {/* <a href="/nhl">NHL</a> */}
             </li>
           </ul>
         </div>
