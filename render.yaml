@@ -1,0 +1,8 @@
+staticSites:
+  - name: ESPN_CLONE
+    buildCommand: npm run build
+    staticPublishPath: build
+    redirects:
+      - source: '/*'
+        destination: '/index.html'
+        statusCode: 200
