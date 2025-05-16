@@ -24,7 +24,7 @@ function TeamWrapper(){
 
 function HomeWrapper(){
   const { sport } = useParams();
-  return <Home sport={sport} />;
+  return <Home sport={sport || "nfl"} />;
 }
 
 function TeamsWrapper(){
@@ -54,7 +54,7 @@ function App() {
         </div>
         <main>
           <Routes>
-            <Route path="" element={<Navigate to="/nfl" />} />
+            <Route path="/" element={<Navigate to="/nfl" />} />
             <Route path='/:sport/' element={<HomeWrapper/>}/>
             <Route path='/:sport/article/:id' element={<ArticleWrapper/>}/>
             <Route path='/:sport/scores' element={<ScoresWrapper/>}/>
