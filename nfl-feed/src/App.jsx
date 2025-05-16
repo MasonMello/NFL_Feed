@@ -10,6 +10,7 @@ import Scores from './pages/Scores'
 import Teams from './pages/Teams'
 import SingleTeam from './components/SingleTeam'
 import TopNavBar from './components/TopNavBar'
+import { Navigate } from 'react-router-dom'
 
 function ArticleWrapper() {
   const { id } = useParams();
