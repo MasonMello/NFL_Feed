@@ -18,7 +18,7 @@ function NavBar() {
       <ul style={{fontSize : "1.25em"}}>
         <img src={logos[sport]} alt="websitelogo" style={{objectFit: "contain", width: "100%"}} />
         <li>
-          <Link to={sport}>Home</Link>
+          <Link to={sport}>Homeeeee</Link>
         </li>
         <li>
         <Link to={`${sport}/scores`}>Scores</Link>
