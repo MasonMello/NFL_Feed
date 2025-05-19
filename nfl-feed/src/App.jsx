@@ -54,7 +54,7 @@ function App() {
         </div>
         <main>
           <Routes>
-            <Route path="/" element={<Navigate to="/nfl" />} />
+            <Route path="/" element={<Navigate to="/nfl" replace/>} />
             <Route path='/:sport/' element={<HomeWrapper/>}/>
             <Route path='/:sport/article/:id' element={<ArticleWrapper/>}/>
             <Route path='/:sport/scores' element={<ScoresWrapper/>}/>
