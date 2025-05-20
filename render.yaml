@@ -2,8 +2,7 @@ services:
   - type: web
     name: ESPN_CLONE
     env: node
-    buildCommand: npm run build
-    startCommand: npx serve -s dist
+    buildCommand: npm install && npm run build
     envVars:
       - key: NODE_VERSION
         value: 18
