@@ -1,7 +1,5 @@
 services:
-  - type: web
-    name: ESPN_CLONE
-    env: node
+  - env: node
     buildCommand: npm run build
     startCommand: npx serve -s dist
     envVars:
