@@ -1,7 +1,9 @@
 services:
-  - type: static
-    name: ESPN_CLONE
+  - type: web
+    name: your-service-name
+    env: node
     buildCommand: npm run build
+    startCommand: npx serve -s dist
     publishPath: dist
     envVars:
       - key: NODE_VERSION
