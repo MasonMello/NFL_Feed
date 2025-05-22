@@ -2,3 +2,7 @@ routes:
   - type: rewrite
     src: /*
     dest: /index.html
+services:
+  - type: static
+    name: NFL_Feed
+    staticPublishPath: dist
