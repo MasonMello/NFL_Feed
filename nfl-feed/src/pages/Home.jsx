@@ -15,6 +15,7 @@ function Home({sport}){
         const loadLatestArticles = async () => {
             try{
                 setLoading(true);
+                console.log("Sport: ", sport);
                 const latestArticles = await getAllArticles(sport);
                 setArticles(latestArticles);
                 setError(null);
