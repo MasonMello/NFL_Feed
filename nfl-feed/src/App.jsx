@@ -17,27 +17,27 @@ function ArticleWrapper() {
 
 function TeamWrapper(){
   const { id, sport } = useParams();
-  return <SingleTeam sport={sport} teamID={id} />;
+  return <SingleTeam sport={sport || "nfl"} teamID={id} />;
 }
 
 function HomeWrapper(){
   const { sport } = useParams();
-  return <Home sport={sport} />;
+  return <Home sport={sport || "nfl"} />;
 }
 
 function TeamsWrapper(){
   const { sport } = useParams();
-  return <Teams sport={sport}/>
+  return <Teams sport={sport || "nfl"}/>
 } 
 
 function ScoresWrapper(){
   const { sport } = useParams();
-  return <Scores sport={sport}/>
+  return <Scores sport={sport || "nfl"}/>
 }
 
 function NavWrapper(){
   const {sport} = useParams();
-  return <NavBar sport={sport}/>
+  return <NavBar sport={sport || "nfl"}/>
 }
 
 function App() {
@@ -52,7 +52,7 @@ function App() {
         </div>
         <main>
           <Routes>
-            <Route path="/" element={<HomeWrapper sport="nfl"/>} />
+            {/* <Route path="/" element={<Navigate to="/nfl" replace/>} /> */}
             <Route path='/:sport/' element={<HomeWrapper/>}/>
             <Route path='/:sport/article/:id' element={<ArticleWrapper/>}/>
             <Route path='/:sport/scores' element={<ScoresWrapper/>}/>
