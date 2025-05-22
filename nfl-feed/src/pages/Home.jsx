@@ -8,14 +8,14 @@ function Home({sport}){
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    if(sport = undefined || sport === null || sport === ""){
-        sport = "nfl";
-    }
+    
     useEffect(()=> {
         const loadLatestArticles = async () => {
             try{
                 setLoading(true);
-                
+                if(sport = undefined || sport === null || sport === ""){
+                    sport = "nfl";
+                }
                 const latestArticles = await getAllArticles(sport);
                 setArticles(latestArticles);
                 setError(null);
