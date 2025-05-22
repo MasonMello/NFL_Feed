@@ -15,7 +15,7 @@ function Home({sport}){
         const loadLatestArticles = async () => {
             try{
                 setLoading(true);
-                console.log("Sport: ", sport);
+                
                 const latestArticles = await getAllArticles(sport);
                 setArticles(latestArticles);
                 setError(null);
@@ -24,6 +24,7 @@ function Home({sport}){
                 console.log(err);
             }finally{
                 setLoading(false);
+                console.log("Sport: ", sport);
                 console.log("Article fetch complete");
             }
         }
