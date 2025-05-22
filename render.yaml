@@ -1,8 +1,5 @@
-routes:
-  - type: rewrite
-    src: /*
-    dest: /index.html
 services:
   - type: static
     name: NFL_Feed
+    buildCommand: ./render-build.sh
     staticPublishPath: dist
