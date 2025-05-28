@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3001;
 const allowedOrigins = [
   'http://localhost:3000', // Local React dev URL
   'https://espn-clone.onrender.com', // Deployed React app URL
+  'https://nfl-feed-ussq.onrender.com', // Another deployed React app URL
   'https://nfl-feed.onrender.com' // Proxy server URL
 ];
 
