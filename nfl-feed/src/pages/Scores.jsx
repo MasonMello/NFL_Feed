@@ -15,6 +15,7 @@ function Scores({sport}){
             try{
                 setLoading(true);
                 const latestGames = await getGames(sport);
+                console.log("Games response:", latestGames);
                 setGames(latestGames);
                 setError(null);
             }catch(err){
