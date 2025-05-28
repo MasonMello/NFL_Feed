@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/ScoresCard.css"
+import "../css/ScoresCard.css";
 
 function ScoresCard({ game }) {
   const comp = game.competitions[0];
@@ -15,21 +15,39 @@ function ScoresCard({ game }) {
           <span className="fw-semibold">{comp.status?.type?.shortDetail ?? ""}</span>
         </div>
 
-        <div className="d-flex holder align-items-center justify-content-around text-white mt-3">
-          {[team1, team2].map((team, idx) => (
-            <div key={idx} className="team text-center container">
-              <img src={team.team?.logo} alt={`Team ${idx + 1} Logo`} />
-              <span className="fs-5 fw-semibold mt-2 medium" style={{ color: `#${team.team?.color ?? 'ffffff'}` }}>
-                {team.team?.name}
-              </span>
-              <small className="text-secondary small">
-                ({team.records?.[0]?.summary ?? "No record"})
-              </small>
-            </div>
-          ))}
+        <div className="d-flex align-items-center justify-content-around text-white mt-3">
 
-          <div className="score fs-1 fw-bold text-white container large d-flex justify-content-center align-items-center">
+          {/* Team 1 */}
+          <div className="team text-center container">
+            <img src={team1.team?.logo} alt="Team 1 Logo" />
+            <span
+              className="fs-5 fw-semibold mt-2 medium"
+              style={{ color: `#${team1.team?.color ?? 'ffffff'}` }}
+            >
+              {team1.team?.name}
+            </span>
+            <small className="text-secondary small">
+              ({team1.records?.[0]?.summary ?? "No record"})
+            </small>
+          </div>
+
+          {/* Score */}
+          <div className="score fs-2 fw-bold text-white text-center mx-3">
             {team1.score} - {team2.score}
+          </div>
+
+          {/* Team 2 */}
+          <div className="team text-center container">
+            <img src={team2.team?.logo} alt="Team 2 Logo" />
+            <span
+              className="fs-5 fw-semibold mt-2 medium"
+              style={{ color: `#${team2.team?.color ?? 'ffffff'}` }}
+            >
+              {team2.team?.name}
+            </span>
+            <small className="text-secondary small">
+              ({team2.records?.[0]?.summary ?? "No record"})
+            </small>
           </div>
         </div>
 
