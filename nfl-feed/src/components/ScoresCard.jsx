@@ -19,7 +19,11 @@ function ScoresCard({ game }) {
 
           {/* Team 1 */}
           <div className="team text-center container">
-            <img src={team1.team?.logo} alt="Team 1 Logo" />
+            <img
+              src={team1.team?.logo}
+              alt="Team 1 Logo"
+              style={{ width: "60px", height: "60px", objectFit: "contain" }}
+            />
             <span
               className="fs-5 fw-semibold mt-2 medium"
               style={{ color: `#${team1.team?.color ?? 'ffffff'}` }}
@@ -38,7 +42,11 @@ function ScoresCard({ game }) {
 
           {/* Team 2 */}
           <div className="team text-center container">
-            <img src={team2.team?.logo} alt="Team 2 Logo" />
+            <img
+              src={team2.team?.logo}
+              alt="Team 2 Logo"
+              style={{ width: "60px", height: "60px", objectFit: "contain" }}
+            />
             <span
               className="fs-5 fw-semibold mt-2 medium"
               style={{ color: `#${team2.team?.color ?? 'ffffff'}` }}
