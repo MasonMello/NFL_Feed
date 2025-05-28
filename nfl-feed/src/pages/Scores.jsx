@@ -23,7 +23,8 @@ function Scores({sport}){
             }finally{
                 setLoading(false);
                 console.log("Game fetch complete");
-                console.log(games);
+                console.log(games[0]);
+                console.log(games[1]);
             }
         }
         loadLatestGames();
