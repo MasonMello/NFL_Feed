@@ -50,6 +50,7 @@ const scoresURL =
 export const getGames = async (sport) => {
   let sportName = findSport(sport);
   const completeScoresURL = `${scoresURL}${sportName}/${sport}/scoreboard`;
+  console.log(completeScoresURL);
   const response = await fetch(completeScoresURL, {
     mode: 'cors',
   });
