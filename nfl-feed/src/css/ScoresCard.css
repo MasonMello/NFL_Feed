@@ -1,17 +1,6 @@
-.scores-card {
-  background-color: #121212;
-  color: white;
-  max-width: 1200px;
-  border-radius: 10px;
-  width: 100%;
-}
 
-.info {
-  color: white;
-  padding: auto;
-}
 
-.holder {
+.scores-card .holder {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,42 +13,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex: 1;
-  min-width: 0;
+  width: 200px;
 }
 
 .scores-card .team-logo {
-  height: 60px;
   width: 60px;
+  height: 60px;
   object-fit: contain;
-  background-color: white;
-  border-radius: 8px;
 }
 
 .scores-card .score {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
   color: white;
   text-align: center;
-  margin: 0 2rem;
-  flex-shrink: 0;
-}
-
-.scores-card .text-secondary {
-  color: #a0a0a0 !important;
-}
-
-.scores-card .medium {
-  font-size: 1.25rem;
-  text-align: center;
-}
-
-.scores-card .small {
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-.scores-card .fw-semibold {
-  font-weight: 600;
+  width: 100px;
 }
