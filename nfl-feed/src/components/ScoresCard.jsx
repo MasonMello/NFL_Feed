@@ -6,6 +6,10 @@ function ScoresCard({ game }) {
   const team1 = comp.competitors[0];
   const team2 = comp.competitors[1];
 
+  console.log("Team 1 logo:", team1.team?.logo);
+console.log("Team 2 logo:", team2.team?.logo);
+
+
   return (
     <div className="container d-flex justify-content-center">
       <div className="card scores-card border-0 shadow-lg p-3">
@@ -24,6 +28,7 @@ function ScoresCard({ game }) {
       className="team-logo"
     />
   </div>
+  
 
   <div className="score mx-4">
     {team1.score} - {team2.score}
