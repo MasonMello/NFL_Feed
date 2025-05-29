@@ -15,49 +15,60 @@ function ScoresCard({ game }) {
           <span className="fw-semibold">{comp.status?.type?.shortDetail ?? ""}</span>
         </div>
 
-        {/* Logos and Score */}
-        <div className="d-flex justify-content-around align-items-center mt-4">
-          <img
-            src={team1.team?.logo}
-            alt="Team 1 Logo"
-            style={{ width: "60px", height: "60px", objectFit: "contain" }}
-          />
-          <div className="score fs-2 fw-bold text-white text-center">
-            {team1.score} - {team2.score}
-          </div>
-          <img
-            src={team2.team?.logo}
-            alt="Team 2 Logo"
-            style={{ width: "60px", height: "60px", objectFit: "contain" }}
-          />
-        </div>
+        {/* Logos and Score Row */}
+<div className="holder mt-4">
+  <div className="team">
+    <img
+      src={team1.team?.logo}
+      alt="Team 1 Logo"
+      className="team-logo"
+    />
+  </div>
 
-        {/* Team Names */}
-        <div className="d-flex justify-content-around text-white mt-2">
-          <div className="text-center">
-            <span
-              className="fs-5 fw-semibold"
-              style={{ color: `#${team1.team?.color ?? 'ffffff'}` }}
-            >
-              {team1.team?.name}
-            </span>
-            <div className="small text-secondary">
-              {team1.records?.[0]?.summary ?? "No record"}
-            </div>
-          </div>
+  <div className="score mx-4">
+    {team1.score} - {team2.score}
+  </div>
 
-          <div className="text-center">
-            <span
-              className="fs-5 fw-semibold"
-              style={{ color: `#${team2.team?.color ?? 'ffffff'}` }}
-            >
-              {team2.team?.name}
-            </span>
-            <div className="small text-secondary">
-              {team2.records?.[0]?.summary ?? "No record"}
-            </div>
-          </div>
-        </div>
+  <div className="team">
+    <img
+      src={team2.team?.logo}
+      alt="Team 2 Logo"
+      className="team-logo"
+    />
+  </div>
+</div>
+
+{/* Names Row */}
+<div className="holder mt-2">
+  <div className="team">
+    <span
+      className="fs-5 fw-semibold"
+      style={{ color: `#${team1.team?.color ?? 'ffffff'}` }}
+    >
+      {team1.team?.name}
+    </span>
+    <div className="small text-secondary">
+      {team1.records?.[0]?.summary ?? "No record"}
+    </div>
+  </div>
+
+  <div className="team" style={{ visibility: 'hidden' }}>
+    {/* empty div to center spacing with 3 columns */}
+  </div>
+
+  <div className="team">
+    <span
+      className="fs-5 fw-semibold"
+      style={{ color: `#${team2.team?.color ?? 'ffffff'}` }}
+    >
+      {team2.team?.name}
+    </span>
+    <div className="small text-secondary">
+      {team2.records?.[0]?.summary ?? "No record"}
+    </div>
+  </div>
+</div>
+
 
         {/* Notes */}
         {comp.notes?.[0]?.headline && (
