@@ -52,7 +52,7 @@ function SingleArticle({ articleID, sport }) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
-  //return <div dangerouslySetInnerHTML={{ __html: story }} />;
+
   return(
     <div className='container'>
       <div className="content">
