@@ -7,7 +7,7 @@ function TeamCard({ sport, team }) {
     <div className="col-md-4 team">
       <Link to={`/${sport}/team/${team.abbreviation}`} className="team-link">
         <div className="card team-card" style={{ backgroundColor: `#${team.color}`, position: "relative" }}>
-          <img className="team-logo" src={team.logos[1].href} alt="Team logo" />
+          <img className="single_team-logo" src={team.logos[1].href} alt="Team logo" />
           <div className="card-body text-bottom">
             <h1 className="team-name text-overlay">{team.displayName}</h1>
           </div>
