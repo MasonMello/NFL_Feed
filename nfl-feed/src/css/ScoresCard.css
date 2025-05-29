@@ -3,20 +3,12 @@
   color: white;
   max-width: 1200px;
   border-radius: 10px;
+  width: 100%;
 }
 
 .info {
   color: white;
   padding: auto;
-}
-
-.scores-card .team-logo {
-  height: 60px;
-  width: 60px;
-  object-fit: contain;
-  display: block;
-  background-color: white; /* helps for transparent logos */
-  border-radius: 8px;
 }
 
 .holder {
@@ -33,7 +25,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100px; /* prevents layout escape */
+  flex: 1;
+  min-width: 0;
+}
+
+.scores-card .team-logo {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+  background-color: white;
+  border-radius: 8px;
 }
 
 .scores-card .score {
@@ -41,7 +42,8 @@
   font-weight: bold;
   color: white;
   text-align: center;
-  margin: 0 1rem;
+  margin: 0 2rem;
+  flex-shrink: 0;
 }
 
 .scores-card .text-secondary {
