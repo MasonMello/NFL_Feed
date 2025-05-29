@@ -2,83 +2,76 @@ import React from "react";
 import "../css/ScoresCard.css";
 
 function ScoresCard({ game }) {
-  const comp = game.competitions[0];
-  const team1 = comp.competitors[0];
-  const team2 = comp.competitors[1];
-
-  console.log("Team 1 logo:", team1.team?.logo);
-console.log("Team 2 logo:", team2.team?.logo);
-
+  const competition = game.competitions[0];
+  const team1 = competition.competitors[0];
+  const team2 = competition.competitors[1];
 
   return (
     <div className="container d-flex justify-content-center">
       <div className="card scores-card border-0 shadow-lg p-3">
 
+        {/* Top Info Row */}
         <div className="container d-flex justify-content-between px-3 text-secondary">
-          <span>{`${game.league?.abbreviation ?? "Game"} · ${new Date(comp.date).toLocaleDateString()}`}</span>
-          <span className="fw-semibold">{comp.status?.type?.shortDetail ?? ""}</span>
+          <span>{`${game.league?.abbreviation || "Game"} · ${new Date(competition.date).toLocaleString("en-US", {
+            month: "numeric",
+            day: "numeric",
+            year: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            hour12: true,
+            timeZoneName: "short",
+          })}`}</span>
+          <span className="fw-semibold">{competition.status.type.detail}</span>
         </div>
 
-        {/* Logos and Score Row */}
-<div className="holder mt-4">
-  <div className="team">
-    <img
-      src={team1.team?.logo}
-      alt="Team 1 Logo"
-      className="team-logo"
-    />
-  </div>
-  
+        {/* Teams & Score Row */}
+        <div className="holder mt-4">
+          {/* Team 1 */}
+          <div className="team">
+            <img
+              src={team1.team?.logo}
+              alt="Team 1 Logo"
+              className="team-logo"
+            />
+            <span
+              className="fs-5 fw-semibold mt-2 medium"
+              style={{ color: `#${team1.team?.color}` }}
+            >
+              {team1.team?.name}
+            </span>
+            <small className="text-secondary small">
+              ({team1.records?.[0]?.summary || "No record"})
+            </small>
+          </div>
 
-  <div className="score mx-4">
-    {team1.score} - {team2.score}
-  </div>
+          {/* Score */}
+          <div className="score mx-4">
+            {team1.score} - {team2.score}
+          </div>
 
-  <div className="team">
-    <img
-      src={team2.team?.logo}
-      alt="Team 2 Logo"
-      className="team-logo"
-    />
-  </div>
-</div>
+          {/* Team 2 */}
+          <div className="team">
+            <img
+              src={team2.team?.logo}
+              alt="Team 2 Logo"
+              className="team-logo"
+            />
+            <span
+              className="fs-5 fw-semibold mt-2 medium"
+              style={{ color: `#${team2.team?.color}` }}
+            >
+              {team2.team?.name}
+            </span>
+            <small className="text-secondary small">
+              ({team2.records?.[0]?.summary || "No record"})
+            </small>
+          </div>
+        </div>
 
-{/* Names Row */}
-<div className="holder mt-2">
-  <div className="team">
-    <span
-      className="fs-5 fw-semibold"
-      style={{ color: `#${team1.team?.color ?? 'ffffff'}` }}
-    >
-      {team1.team?.name}
-    </span>
-    <div className="small text-secondary">
-      {team1.records?.[0]?.summary ?? "No record"}
-    </div>
-  </div>
-
-  <div className="team" style={{ visibility: 'hidden' }}>
-    {/* empty div to center spacing with 3 columns */}
-  </div>
-
-  <div className="team">
-    <span
-      className="fs-5 fw-semibold"
-      style={{ color: `#${team2.team?.color ?? 'ffffff'}` }}
-    >
-      {team2.team?.name}
-    </span>
-    <div className="small text-secondary">
-      {team2.records?.[0]?.summary ?? "No record"}
-    </div>
-  </div>
-</div>
-
-
-        {/* Notes */}
-        {comp.notes?.[0]?.headline && (
+        {/* Optional Notes */}
+        {competition.notes?.[0]?.headline && (
           <p className="text-center text-secondary mt-3">
-            {comp.notes[0].headline}
+            {competition.notes[0].headline}
           </p>
         )}
       </div>
