@@ -56,7 +56,7 @@ function SingleTeam({ sport, teamID }) {
           {teamInfo.record?.items?.[0]?.summary ? (
             <p className="text-center font-weight-bold h4 mb-3">{teamInfo.record.items[0].summary}</p>
           ) : (
-            <p className="text-muted text-center">No overall record available</p>
+            <p className="text-muted text-center">No overall record available - CHECK BACK NEXT SEASON!</p>
           )}
           {teamInfo.record?.items?.[0]?.stats?.length > 0 ? (
             <div className="table-responsive">
